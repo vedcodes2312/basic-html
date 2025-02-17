@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>methods to create objects,function types in js</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function calculate() {
+            var num= prompt("enter number");
+            alert(num*num);
+        }
+        var person={                     //literal object
+            firstname: "Virat ",
+            lastname: "Kohli",
+            age: 36,
+            profession: "cricketer",
+            iplteam: "RCB",
+        }
+document.write("Person details: "+ "<br>" + "Firstname: "+person.firstname);
+document.write(person.lastname+"<br>"+"Age: "+person.age+"<br>"+"Team: "+person.iplteam + "<br>") ;   
+   document.write("<br>");  
+     var emp= new Object();           //direct object
+        emp.id=1;
+        emp.name="Vrund";
+        emp.salary=5000;
+        document.write("Object details of Employee");
+        document.write("<br>");
+        for(value in emp)
+        {
+            document.write(emp[value]+"");       //all object elements are stored in an array
+            document.write("<br>");
+        }
+                     //constructor object
+        function employee(id,name,salary){
+            this.id=id;
+            this.name=name;
+            this.salary=salary;
+        }
+        var e=new employee(2,"Ved Vyas",300000);
+        document.write("Object of emp: ");
+        for(value in e) {
+            document.write(e[value]+""); //all object elements are stored in an array
+            document.write("<br>");
+        }
+        function info() {
+            return "hello gsfc university";
+        }
+        function sum(num1) {
+            num1 = num1 + 5 ;
+            return num1;
+        }
+        document.write(info());
+        document.write("<br>");
+        document.write(sum(69));
+    </script>
+    <br><br><br><br><br>
+    <button onclick="calculate()" value="square of 5"> square of number</button>
+</body>
+</html>
