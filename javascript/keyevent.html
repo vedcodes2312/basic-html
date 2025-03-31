@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="textInput">Text</label>
+        <input type="text" id="textInput" name="textInput">
+        <!-- <input type="text" id="textInput" name="textInput" onkeydown="fun()"> -->
+        <h1> press any key in the input field or anywhere on the document through<br> keyboard, for result check console</h1>
+        <h2>mouse right click-inspect-console</h2>
+        <!--      <script>
+            function fun() {
+                alert("You pressed a key inside the input field");
+            }   </script>                  -->
+    </form>
+<script>
+    // document.getElementById("textInput").onkeydown = function() {myFunction()};
+    // function myFunction() {
+    //     console.log("You pressed a key inside the input field");
+    // }
+    // document.onkeydown = function() {myFunction()};
+    // function myFunction() {
+    //     console.log("You pressed a key inside the input field");
+    // }
+    // document.onkeypress = function() {myFunction()};
+    // function myFunction() {
+    //     console.log("You pressed a key inside the input field");
+    // }
+    // document.onkeyup = function() {myFunction()};
+    // function myFunction() {
+    //     console.log("You pressed a key inside the input field");
+    // }
+    // document.oninput = function() {myFunction()};
+    // function myFunction() {
+    //     console.log("You pressed a key inside the input field");
+    // }
+    document.getElementById("textInput").addEventListener("keydown",   function(m) {     //anonymous function
+     console.log("input keydown event: ",m.key);
+    } );
+    document.getElementById("textInput").addEventListener("keyup",   function(m) {
+     console.log("input keydown event: ",m.key);
+    } );
+    
+</script>
+</body>
+</html>

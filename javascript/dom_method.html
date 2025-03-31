@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom methods document object model</title>
+</head>
+<body>
+    <label for="mytxt">Enter text: </label>
+    <input type="text" id="mytxt">
+    <button onclick ="f1()">Click</button>
+    <div class="class1">This is a div element</div>
+    <div class="class1">This is another div element</div>
+    <form>
+      male: <input type="radio" name="gender" value="male"><br>
+      female: <input type="radio" name="gender" value="female"><br>
+      <button onclick="totalelements()">click</button></form>
+      <p>this is a paragraph</p>
+      <p>this is another paragraph</p>
+      <p>this is another paragraph</p>
+    <!-- <button onclick = "document.write(document.lastModified)">click</button>
+    <button onclick = "document.write(document.URL)">click</button> -->
+    <!-- <button onclick = "document.write(document.title)">click</button>
+    <button onclick = "document.write(document.domain)">click</button>
+    <button onclick = "document.write(document.referrer)">click</button>
+    <button onclick = "document.write(document.cookie)">click</button>
+    <button onclick = "document.write(document.anchors.length)">click</button>
+    <button onclick = "document.write(document.forms.length)">click</button>
+    <button onclick = "document.write(document.images.length)">click</button>
+    <button onclick = "document.write(document.links.length)">click</button>
+    <button onclick = "document.write(document.scripts.length)">click</button>
+    <button onclick = "document.write(document.styleSheets.length)">click</button>
+    <button onclick = "document.write(document.styleSheets[0].href)">click</button>
+    <button onclick = "document.write(document.styleSheets[0].media.mediaText)">click</button>
+    <button onclick = "document.write(document.styleSheets[0].ownerNode)">click</button>
+    <button onclick = "document.write(document.styleSheets[0].ownerRule)">click</button>
+    <button onclick = "document.write(document.styleSheets[0].cssRules.length)">click</button>
+    <button onclick = "document.write(document.styleSheets[0].cssRules[0].cssText)">click</button>
+    <button onclick = "document.write(document.styleSheets[0].cssRules[0].selectorText)">click</button> -->
+   <button onclick="countpara()" >click</button>
+
+    <script>
+          //get element by id
+            function f1() {
+                var x = document.getElementById("mytxt").value;
+                alert(x);
+                /*  var x = document.getElementById("mytxt");
+                    alert(x.value); */
+            }
+            //get element by class name
+            var x = document.getElementsByClassName("class1");
+           // document.write(x[0].innerHTML); 
+                 document.write("on calling x, it will return an array like object: "+x+"<br>");
+                    document.write("on calling x[0], it will return the first element of the array like object: "+x[0]+"<br>");
+              const element = document.getElementsByClassName('class1');
+              for (let i = 0; i < element.length; i++) {
+                document.write(element[i].innerHTML + "<br>");
+                element.item(i).style.backgroundColor = "yellow";
+              }   
+              //get element by name
+              function totalelements() {
+                var allgenders = document.getElementsByName("gender");
+                alert("total genders: "+allgenders.length);
+              } 
+        //get element by tag name
+        function countpara(){
+          var totalpara = document.getElementsByTagName("p");
+          alert("total paragraphs: "+totalpara.length);
+        }
+    </script>
+</body>
+</html> 
